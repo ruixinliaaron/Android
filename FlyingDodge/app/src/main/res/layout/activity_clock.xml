@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/display_clock"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <AnalogClock
+        android:layout_width="fill_parent"
+        android:id="@+id/analog"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingTop="100sp"/>
+
+    <DigitalClock
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/digital"
+        android:gravity="center"
+        android:layout_below="@+id/analog"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hourDisplay"
+        android:layout_below="@+id/digital"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:padding="40sp"
+        android:textSize="20sp"
+        android:text="@string/close_App"
+        />
+</RelativeLayout >

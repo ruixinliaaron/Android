@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id= "@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bohan.flyingpig.ChefActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="Order List"
+        android:textColor="@color/colorPrimary"
+        android:textStyle = "bold"
+        android:textSize ="34sp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <ExpandableListView
+        android:id="@+id/orderlist"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:choiceMode="singleChoice">
+    </ExpandableListView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Receive"
+            android:onClick="receiveOrder"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/response_arrays"
+            android:prompt="@string/response_prompt"
+            android:layout_toRightOf="@id/receive"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "Submit"
+            android:layout_toRightOf="@id/spinner"
+            android:onClick = "submitResponse"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
